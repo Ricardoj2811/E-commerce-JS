@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Compra de ropa femenina">
+	<meta name="keywords" content="SHOP, PANTALON, POLLERAS, VESTIDO, MUJER, MODA, OUTFIT, VERANO">
+	<title>SHOP</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<!--Header del sitio-->
+	<header class="container-fluid bg-color">
+		<div class="container-xl bg-color">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-color fixed-top">
+				<div class="container-fluid">
+					<a class="navbar-brand my-0 py-0" href="index.html"><img src="./assets/logo.png" alt="Logo"></a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+						aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link font-weight-bold" aria-current="page" href="index.html">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active font-weight-bold" href="./index.html">Shop</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link font-weight-bold disabled"
+									href="./nuestra_historia.html">Historia</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link font-weight-bold disabled" href="./blog.html">Blog</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link font-weight-bold disabled" href="./contacto.html">Contacto</a>
+							</li>
+							<form class="d-flex mx-2">
+								<button class="btn btn-outline-dark btn-carrito" type="button" onclick="verCarrito()"
+									data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="./">
+									<img class="me-2" width="20px" height="20px" src="./assets/carritoCompras.png"
+										alt="Logo">
+									<span class="badge bg-dark text-white ms-1 rounded-pill"
+										id="cantidadCarrito">0</span>
+								</button>
+							</form>
+						</ul>
+						<div class="mx-auto"></div>
+						<form class="d-flex py-2">
+							<input id="productoBuscado" class="form-control me-2" type="input"
+								placeholder="¿Que estas Buscando?" aria-label="Search">
+							<button class="btn btn-outline-dark" onclick="buscarProducto()"
+								type="button">Buscar</button>
+						</form>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--Fin del Header-->
+	<div class="container-fluid fondo comienzo">
+		<h2 class="container-fluid text-center descripcion-shop font-weight-bold mt-5 mb-4 rounded-3">PRODUCTOS</h2>
+		<section class="row" id="listadoDeProductos">
+			<h1>CARGANDO PRODUCTOS...</h1>
+			<!-- ELEMENTOS AGREGADOS DESDE EL JS -->
+		</section>
+		<div class="text-center">
+			<button type="button" id="vaciarCarrito" class="btn btn-danger boton-compra">
+				VACIAR CARRITO
+			</button>
+			<button type="button" id="verCarrito" class="btn btn-dark boton-compra" data-bs-toggle="modal"
+				data-bs-target="#staticBackdrop">
+				VER CARRITO
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+				aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="staticBackdropLabel">CARRITO DE COMPRAS</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col">Imagen</th>
+										<th scope="col">Nombre</th>
+										<th scope="col">Cantidad</th>
+										<th scope="col">Precio Unitario</th>
+									</tr>
+								</thead>
+								<tbody id="cuerpoModal">
+								</tbody>
+							</table>
+							<div id="totalDeCompra">
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" onclick="vaciarCarrito()" class="btn btn-secondary"
+								data-bs-dismiss="modal">VACIAR</button>
+							<button type="button" class="btn btn-primary"><a class="nav-link2" href="https://api.whatsapp.com/send?phone=541123268854" target="_blank">COMPRAR</a></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Inicio del Footer-->
+	<footer class="container-fluid" id="footer">
+		<p class="font-weight-bold text-center mb-0">© Ricardo Nuñez</p>
+		<ul class="nav justify-content-center">
+			<li class="nav-item">
+				<a class="nav-link active" aria-current="page" href="https://www.instagram.com/?hl=es"
+					target="_blank"><img src="assets/insta.png" alt="instagram"></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://www.facebook.com/" target="_blank"><img src="assets/face.png"
+						alt="facebook"></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="https://api.whatsapp.com/send?phone=541123268854" target="_blank"><img
+						src="assets/ws.png" alt="whatsapp"></a>
+			</li>
+		</ul>
+	</footer>
+	<!--Fin del Footer-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

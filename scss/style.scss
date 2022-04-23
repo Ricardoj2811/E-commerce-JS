@@ -1,0 +1,370 @@
+@import "fuentes";
+@import "variables";
+@import "tools";
+
+body{
+	@include font_family_roboto()
+	font-weight: map-get($miMap, light);
+}
+
+.font-weight-bold{
+	font-weight: map-get($miMap, bold);
+}
+
+.font-weight-light{
+	font-weight: map-get($miMap, light);
+}
+
+.font-weight-medium{
+	font-weight: map-get($miMap, medium);
+}
+
+.comienzo{
+	margin-top: 80px !important;
+}
+
+.bg-color{
+	background-color: $bg-color-header;
+}
+
+.color-pink{
+	color: pink;
+}
+
+.navbar-brand{
+
+	img{
+		height: 50px;
+		width: 50px;
+
+		&:hover{
+			transform: scale(1.7)
+		}
+	}
+}
+
+.navbar-nav{
+	.nav-item{
+		a{
+			color: $color-navbar-letras;
+			@include font_family_roboto()
+			font-size: 1.2rem;
+
+			&:hover{
+				color: $color-navbar-letras-hover !important;
+			}
+		}
+	}
+}
+
+@keyframes letrero-index{
+	0%{
+		color: magenta ;
+	}
+
+	100%{
+		color: orange;
+	}
+}
+
+.banner-index{
+	background-image: url('../assets/collageHome.png');
+	background-size: cover;
+	height: 600px;
+
+	@media all and (max-width: $point-md){
+		background-image: url('../assets/fondo2.jpg');
+		background-size: cover;
+		object-fit: contain;
+	}
+
+	.letrero-banner{
+		color: $color-letro-banner-index;
+		@include font_family_bebas()
+		font-size: 4rem;
+		margin-top: 160px;
+		animation-name: letrero-index;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-duration: 1s;
+		animation-delay: 0.01s;
+
+		@media all and (max-width: $point-md){
+			font-size: 2.2rem;
+		}
+	}
+
+	.boton-comprar{
+		color: $color-boton-comprar-index;
+		@include font_family_bebas()
+		font-size: 2rem;
+		margin-top: 150px;
+
+		&:hover{
+			background-color: $boton-comprar-index;
+			color: white;
+		}
+
+		@media all and (max-width: $point-md){
+			margin-top: 250px;
+		}
+	}
+}
+
+@keyframes letrero-animado{
+	0%{
+		color:#c786cc ;
+	}
+
+	100%{
+		color: magenta;
+	}
+}
+
+.letrero-descuento{
+	@extend .color-pink;
+	@include font_family_bebas()
+	background-color: $bg-letrero-descuento;
+	font-size: 2rem;
+	animation-name: letrero-animado;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1s;
+	animation-delay: 0.01s;
+	@media all and (max-width: $point-md){
+			font-size: 1.5rem;
+		}
+}
+
+.letrero-codigo{
+	@extend .color-pink;
+	@include font_family_bebas()
+	font-size: 2rem;
+	background-color: orange;
+}
+
+.carousel-img{
+
+	img{
+		max-width: 400px !important;
+		height: 450px;
+		object-fit: contain;
+	}
+}
+
+.descripcion-shop{
+	color: $color-shop-letras;
+	@include font_family_roboto()
+	background-color: $bg-titulos-shop;
+	font-size: 2rem;
+	max-width: 280px;
+	border: 2px solid #0000002b;
+}
+
+.letras-modal{
+	@include font_family_roboto()
+	color: black;
+}
+
+.nav-link{
+	&:hover{
+		color: white !important;
+	}
+}
+
+.carritoCompras{
+	img{
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.imagenes-shop{
+	transition: all 250ms ease-in-out;
+	height: 200px;
+	width: 155px;
+	
+	&:hover{
+		transform: scale(1.5);
+		box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+	}
+}
+
+.card-border{
+	width: 160px;
+	border: 2px solid #0000002b;
+	background-color: white;
+}
+
+.fondo{
+	background-image: url('../assets/logo.jpg');
+	background-position: center;
+	background-repeat: repeat;
+
+	.letrero-historia{
+		color: $color-letrero-historia;
+		font-size: 3rem;
+		@include font_family_bebas()
+		animation-name: letrero-animado;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-duration: 1s;
+		animation-delay: 0.01s;
+
+		@media all and (max-width: $point-md){
+			font-size: 1.7rem;
+		}
+
+	}
+
+	.texto-historia{
+		color: $color-historia-letras;
+		@include font_family_montserrat()
+		font-size: 1.2rem;
+	}
+
+	.subtitulos-blog{
+		@include font_family_bebas()
+		font-size: 1.2rem;
+		background-color: $bg-titulo-blog;
+		max-width: 400px;
+		border: 2px solid #0000002b;
+	}
+	
+	.tituloFormulario{
+		@include font_family_roboto()
+		font-size: 2rem;
+		max-width: 600px;
+		background-color: $bg-formulario;
+		border: 2px solid #0000002b;
+
+		@media all and (max-width: $point-md){
+			font-size: 1.3rem;
+			max-width: 280px;
+		}
+	}
+
+	.formulario{
+		max-width: 600px;
+		background-color: $bg-formulario;
+	}
+
+	.boton-enviar{
+		color: $color-boton-comprar-index;
+		@include font_family_bebas()
+		font-size: 1.2rem;
+		background-color: $botones;
+		margin-bottom: 20px;
+		border: 2px solid #68616140;
+
+		&:hover{
+			background-color: black;
+			color: white;
+		}
+	}
+
+	.letras-precio-shop{
+		font-size: 0.8rem;
+		@include font_family_montserrat()
+	}
+}
+
+.boton-compra{
+		color: $color-boton-comprar-index;
+		@include font_family_bebas()
+		font-size: 1rem;
+		background-color: $botones;
+		margin-bottom: 20px;
+		height: 37px;
+		border: 2px solid #68616140;
+
+}
+
+.imagenAbout{
+	img{
+		height: 310px;
+
+		@media all and (max-width: $point-md){
+			height: 180px;
+		}
+	}
+}
+
+.imagen-principal-blog{
+	img{
+		max-width: 450px;
+	}
+}
+
+.descripcion{
+		@include font_family_montserrat()
+		font-size: 1.2rem;
+		max-width: 800px;
+		@media all and (max-width: $point-md){
+			font-size: 1rem;
+		}
+}
+
+.letrero-blog{
+	color: #c786cc;
+	@include font_family_bebas()
+	font-size: 4rem;
+	background-color: #ffa5008f;
+}
+
+.imagenes-blog{
+	max-width: 400px;
+}
+
+.blog-img{
+		width: 100%;
+		height: 100%;
+		transition: all 250ms ease-in-out;
+
+		&:hover{
+			transform: scale(1.2);
+			box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
+		}
+}
+
+.titulo-blog{
+	@include font_family_bebas()
+	font-size: 2rem;
+	background-color: $bg-titulo-blog;
+	max-width: 500px;
+	border: 2px solid #0000002b;
+
+	@media all and (max-width: $point-md){
+			font-size: 1.5rem;
+	}
+}
+
+.letras-blog{
+	color: $color-blog-letras;
+	@include font_family_bebas()
+	font-size: 2rem;
+}
+
+.mapa{
+	iframe{
+		height: 150px;
+		max-width: 600px;
+	}
+}
+
+#footer{
+	background-color: $bg-footer;
+
+	p{
+		@include font_family_roboto()
+		font-size: 1rem;
+		color: $color-footer-letras;
+	}
+
+	.nav{
+		img{
+			width: 30px;
+			height: 30px;
+		}
+	}
+}

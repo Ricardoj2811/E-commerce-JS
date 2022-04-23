@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "style.css",
+	"sources": [
+		"../scss/style.scss",
+		"../scss/_fuentes.scss",
+		"../scss/_variables.scss"
+	],
+	"sourcesContent": [
+		"@import \"fuentes\";\r\n@import \"variables\";\r\n\r\nbody{\r\n\tfont-family: 'Roboto', sans-serif;\r\n\tfont-size: 400;\r\n}\r\n\r\n.font-weight-bold{\r\n\tfont-weight: $font-size-bold;\r\n}\r\n\r\n.font-weight-light{\r\n\tfont-weight: $font-size-light;\r\n}\r\n\r\n.font-weight-medium{\r\n\tfont-weight: $font-size-medium;\r\n}\r\n\r\n.comienzo{\r\n\tmargin-top: 80px !important;\r\n}\r\n\r\n.bg-color{\r\n\tbackground-color: $bg-color-header;\r\n}\r\n\r\n.navbar-brand{\r\n\r\n\timg{\r\n\t\theight: 50px;\r\n\t\twidth: 50px;\r\n\r\n\t\t&:hover{\r\n\t\t\ttransform: scale(1.7)\r\n\t\t}\r\n\t}\r\n}\r\n\r\n.navbar-nav{\r\n\t.nav-item{\r\n\t\ta{\r\n\t\t\tcolor: $color-navbar-letras;\r\n\t\t\tfont-family: 'Roboto', sans-serif;\r\n\t\t\tfont-size: 1.2rem;\r\n\r\n\t\t\t&:hover{\r\n\t\t\t\tcolor: $color-navbar-letras-hover !important;\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}\r\n\r\n\r\n\r\n\r\n\r\n",
+		"@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle:wght@300;400;700&family=Montserrat:wght@400;600;800&family=Roboto:ital,wght@0,100;0,700;1,400&display=swap');",
+		"$font-size-bold: 700;\r\n\r\n$font-size-light: 400;\r\n\r\n$font-size-medium: 500;\r\n\r\n$bg-color-header: #261f1f8a;\r\n\r\n$point-md: 768px;\r\n\r\n$color-navbar-letras: #000000b0;\r\n\r\n$color-navbar-letras-hover: orange;"
+	],
+	"names": [],
+	"mappings": "ACAA,OAAO,CAAC,mLAAI;;ADGZ,AAAA,IAAI,CAAA;EACH,WAAW,EAAE,oBAAoB;EACjC,SAAS,EAAE,GAAG,GACd;;;AAED,AAAA,iBAAiB,CAAA;EAChB,WAAW,EETK,GAAG,GFUnB;;;AAED,AAAA,kBAAkB,CAAA;EACjB,WAAW,EEXM,GAAG,GFYpB;;;AAED,AAAA,mBAAmB,CAAA;EAClB,WAAW,EEbO,GAAG,GFcrB;;;AAED,AAAA,SAAS,CAAA;EACR,UAAU,EAAE,eAAe,GAC3B;;;AAED,AAAA,SAAS,CAAA;EACR,gBAAgB,EEnBC,SAAS,GFoB1B;;;AAED,AAEC,aAFY,CAEZ,GAAG,CAAA;EACF,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI,GAKX;;EATF,AAME,aANW,CAEZ,GAAG,AAID,MAAM,CAAA;IACN,SAAS,EAAE,UAAU,GACrB;;;AAIH,AAEE,WAFS,CACV,SAAS,CACR,CAAC,CAAA;EACA,KAAK,EEjCc,SAAS;EFkC5B,WAAW,EAAE,oBAAoB;EACjC,SAAS,EAAE,MAAM,GAKjB;;EAVH,AAOG,WAPQ,CACV,SAAS,CACR,CAAC,AAKC,MAAM,CAAA;IACN,KAAK,EEpCmB,MAAM,CFoCI,UAAU,GAC5C"
+}

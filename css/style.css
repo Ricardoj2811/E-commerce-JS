@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dongle:wght@300;400;700&family=Montserrat:wght@400;600;800&family=Roboto:ital,wght@0,100;0,700;1,400&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; }
+
+.font-weight-bold {
+  font-weight: 700; }
+
+.font-weight-light {
+  font-weight: 300; }
+
+.font-weight-medium {
+  font-weight: 400; }
+
+.comienzo {
+  margin-top: 80px !important; }
+
+.bg-color {
+  background-color: #261f1f8a; }
+
+.color-pink, .letrero-descuento, .letrero-codigo {
+  color: pink; }
+
+.navbar-brand img {
+  height: 50px;
+  width: 50px; }
+  .navbar-brand img:hover {
+    transform: scale(1.7); }
+
+.navbar-nav .nav-item a {
+  color: #000000b0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem; }
+  .navbar-nav .nav-item a:hover {
+    color: orange !important; }
+
+@keyframes letrero-index {
+  0% {
+    color: magenta; }
+  100% {
+    color: orange; } }
+
+.banner-index {
+  background-image: url("../assets/collageHome.png");
+  background-size: cover;
+  height: 600px; }
+  @media all and (max-width: 768px) {
+    .banner-index {
+      background-image: url("../assets/fondo2.jpg");
+      background-size: cover;
+      object-fit: contain; } }
+  .banner-index .letrero-banner {
+    color: #c786cca1;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+    margin-top: 160px;
+    animation-name: letrero-index;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 0.01s; }
+    @media all and (max-width: 768px) {
+      .banner-index .letrero-banner {
+        font-size: 2.2rem; } }
+  .banner-index .boton-comprar {
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    margin-top: 150px; }
+    .banner-index .boton-comprar:hover {
+      background-color: #000;
+      color: white; }
+    @media all and (max-width: 768px) {
+      .banner-index .boton-comprar {
+        margin-top: 250px; } }
+
+@keyframes letrero-animado {
+  0% {
+    color: #c786cc; }
+  100% {
+    color: magenta; } }
+
+.letrero-descuento {
+  font-family: 'Bebas Neue', cursive;
+  background-color: #ea916682;
+  font-size: 2rem;
+  animation-name: letrero-animado;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-delay: 0.01s; }
+  @media all and (max-width: 768px) {
+    .letrero-descuento {
+      font-size: 1.5rem; } }
+
+.letrero-codigo {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  background-color: orange; }
+
+.carousel-img img {
+  max-width: 400px !important;
+  height: 450px;
+  object-fit: contain; }
+
+.descripcion-shop {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  background-color: #84bcca80;
+  font-size: 2rem;
+  max-width: 280px;
+  border: 2px solid #0000002b; }
+
+.letras-modal {
+  font-family: 'Roboto', sans-serif;
+  color: black; }
+
+.nav-link:hover {
+  color: white !important; }
+
+.nav-link2 {
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+  }
+
+.carritoCompras img {
+  width: 25px;
+  height: 25px; }
+
+.imagenes-shop {
+  transition: all 250ms ease-in-out;
+  height: 200px;
+  width: 155px; }
+  .imagenes-shop:hover {
+    transform: scale(1.5);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
+
+.card-border {
+  width: 160px;
+  border: 2px solid #0000002b;
+  background-color: white; }
+
+.fondo {
+  background-image: url("../assets/logo.jpg");
+  background-position: center;
+  background-repeat: repeat; }
+  .fondo .letrero-historia {
+    color: #c786cc;
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    animation-name: letrero-animado;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-delay: 0.01s; }
+    @media all and (max-width: 768px) {
+      .fondo .letrero-historia {
+        font-size: 1.7rem; } }
+  .fondo .texto-historia {
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem; }
+  .fondo .subtitulos-blog {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+    background-color: #f2bd5ca3;
+    max-width: 400px;
+    border: 2px solid #0000002b; }
+  .fondo .tituloFormulario {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    max-width: 600px;
+    background-color: #b8c4c870;
+    border: 2px solid #0000002b; }
+    @media all and (max-width: 768px) {
+      .fondo .tituloFormulario {
+        font-size: 1.3rem;
+        max-width: 280px; } }
+  .fondo .formulario {
+    max-width: 600px;
+    background-color: #b8c4c870; }
+  .fondo .boton-enviar {
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.2rem;
+    background-color: #84bcca80;
+    margin-bottom: 20px;
+    border: 2px solid #68616140; }
+    .fondo .boton-enviar:hover {
+      background-color: black;
+      color: white; }
+  .fondo .letras-precio-shop {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif; }
+
+.boton-compra {
+  color: #000;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1rem;
+  background-color: #84bcca80;
+  margin-bottom: 20px;
+  height: 37px;
+  border: 2px solid #68616140; }
+
+.imagenAbout img {
+  height: 310px; }
+  @media all and (max-width: 768px) {
+    .imagenAbout img {
+      height: 180px; } }
+
+.imagen-principal-blog img {
+  max-width: 450px; }
+
+.descripcion {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  max-width: 800px; }
+  @media all and (max-width: 768px) {
+    .descripcion {
+      font-size: 1rem; } }
+
+.letrero-blog {
+  color: #c786cc;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 4rem;
+  background-color: #ffa5008f; }
+
+.imagenes-blog {
+  max-width: 400px; }
+
+.blog-img {
+  width: 100%;
+  height: 100%;
+  transition: all 250ms ease-in-out; }
+  .blog-img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2); }
+
+.titulo-blog {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  background-color: #f2bd5ca3;
+  max-width: 500px;
+  border: 2px solid #0000002b; }
+  @media all and (max-width: 768px) {
+    .titulo-blog {
+      font-size: 1.5rem; } }
+
+.letras-blog {
+  color: #000;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem; }
+
+.mapa iframe {
+  height: 150px;
+  max-width: 600px; }
+
+#footer {
+  background-color: #261f1f8a; }
+  #footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: white; }
+  #footer .nav img {
+    width: 30px;
+    height: 30px; }
+
+.btn-carrito:hover{
+  background-color: rgb(240, 240, 240);
+}
+
+.letras-productos {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem; }
+  @media all and (max-width: 768px) {
+    .letras-productos {
+      font-size: 2.5rem; } }
+  @media all and (max-width: 576px) {
+    .letras-productos {
+      font-size: 1.5rem; } }
