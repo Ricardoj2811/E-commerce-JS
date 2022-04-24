@@ -73,10 +73,7 @@ function verMas(id) {
     let productoAMostrar = productosEnStorage[id - 1];
     localStorage.setItem("productoAMostrar", JSON.stringify(productoAMostrar));
     let productoAMostrarDelStorage = JSON.parse(localStorage.getItem("productoAMostrar"))
-    // Usar para conexion local (Golive con VSCode)
-    // location.href = "../producto.html";
-    // Usar para visualizacion con GitHub Pages
-    location.href = "../E-commerce-JS/producto.html";
+    location.href = "../producto.html";
 }
 
 function obtenerValorInput(elemento) {
