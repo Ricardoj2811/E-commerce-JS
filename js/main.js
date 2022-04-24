@@ -73,7 +73,7 @@ function verMas(id) {
     let productoAMostrar = productosEnStorage[id - 1];
     localStorage.setItem("productoAMostrar", JSON.stringify(productoAMostrar));
     let productoAMostrarDelStorage = JSON.parse(localStorage.getItem("productoAMostrar"))
-    location.href = "/producto.html";
+    location.href = "../producto.html";
 }
 
 function obtenerValorInput(elemento) {
