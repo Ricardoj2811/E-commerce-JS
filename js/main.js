@@ -6,24 +6,24 @@ let valor;
 const obtenerDatos = async () => {
     const response = await fetch("./js/productos.JSON")
     const data = await response.json();
-    data.forEach((producto)=>{
+    data.forEach((producto) => {
         productos.push(producto)
     })
     crearCards(data);
     localStorage.setItem("Productos", JSON.stringify(data));
     return data
 }
-setTimeout(()=> {
+setTimeout(() => {
     obtenerDatos()
-},1000);
+}, 1000);
 
 const carritoDeCompras = JSON.parse(localStorage.getItem("carritoDeCompras")) || [];
-numerosDelCarrito(); 
+numerosDelCarrito();
 
 let productosEnStorage = JSON.parse(localStorage.getItem("Productos"));
 
 function descuento(valor) {
-    valor>10000? valor = valor * 0.85: valor = valor;
+    valor > 10000 ? valor = valor * 0.85 : valor = valor;
     return valor
 }
 
@@ -36,7 +36,7 @@ function crearCards(productosParaLaVenta) {
     productosParaLaVenta.forEach((elemento) => {
         listadoDeCards += `
         <div class="col-xl-2 col-md-4 col-sm-6 text-center">
-            <img src="./assets/${elemento.imagen}.JPG" class="img-fluid imagenes-shop mb-0 rounded-3" alt="${elemento.titulo}">
+            <img src="./assets/${elemento.imagen}.jpg" class="img-fluid imagenes-shop mb-0 rounded-3" alt="${elemento.titulo}">
             <p id="titulo-${elemento.id}" class="font-weight-bold letras-precio-shop my-0">${elemento.titulo}</p>
             <p id="precio-${elemento.id}" class="font-weight-bold letras-precio-shop mt-0 mb-1">${elemento.precio} ARS</p>
             <input class="my-2" value="1" min="1" id="cantidad-${elemento.id}" type="number" placeholder="cantidad">
@@ -62,15 +62,15 @@ function buscarProducto() {
     const productosEncontrados = productos.filter((producto) => {
         return producto.titulo.toUpperCase().match(nombreProductoBuscado);
     });
-    if (productosEncontrados.length === 0){
+    if (productosEncontrados.length === 0) {
         AgregarCards("<h1>Tu busqueda no arrojo ningun resultado :(</h1>")
-    }else{
+    } else {
         crearCards(productosEncontrados);
     }
 }
 
-function verMas(id){
-    let productoAMostrar = productosEnStorage[id-1];
+function verMas(id) {
+    let productoAMostrar = productosEnStorage[id - 1];
     localStorage.setItem("productoAMostrar", JSON.stringify(productoAMostrar));
     let productoAMostrarDelStorage = JSON.parse(localStorage.getItem("productoAMostrar"))
     location.href = "/producto.html";
@@ -137,7 +137,11 @@ function eliminar(nombreProducto) {
             text: `Se elimino con exito del carrito tu producto ${nombreProducto}`,
             icon: "success",
         });
-    } else {
+        verCarrito();
+        if(carritoDeCompras.length === 0){
+            agregandoProductosAlmodal(``);
+        }
+    }else{
         swal({
             title: "¡Error!",
             text: "El producto no se agrego al Carrito, asi que no se puede eliminar",
@@ -145,7 +149,6 @@ function eliminar(nombreProducto) {
         });
     }
 }
-
 function vaciarCarrito() {
     swal({
         title: "¿Estas Segur@?",
@@ -193,10 +196,13 @@ function verCarrito() {
     carritoDeCompras.forEach((elemento) => {
         productosEnCarrito += `
         <tr>
-            <td class ="carritoCompras"> <img src="./assets/${elemento.imagen}.JPG"</td>
+            <td class ="carritoCompras"> <img src="./assets/${elemento.imagen}.jpg"</td>
             <td>${elemento.titulo}</td>
             <td>${elemento.cantidad}</td>
             <td>${elemento.precio}</td>
+            <td><button class="btn btn-outline-dark" type="button" onclick="eliminar('${elemento.titulo}')">
+            <img class="my-auto mx-auto" width="20px" height="20px" src="./assets/boton-x.png" alt="Logo">
+            </button></td>
         </tr>`
         agregandoProductosAlmodal(productosEnCarrito);
     })
